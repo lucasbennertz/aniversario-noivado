@@ -1,0 +1,54 @@
+.card {
+  perspective: 1000px;
+  width: 5dvw;
+  height: 10dvh;
+  cursor: pointer;
+
+  .card-flip {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  &.flipped .card-flip {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    border: solid 1px #000;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-front {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .card-back {
+    transform: rotateY(180deg);
+    font-size: 2dvh;
+    background: #f8f9fa;
+    padding: 2dvh 2dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: justify;
+  }
+  &:hover {
+    transform: scale(2);
+    transition: all 0.3s ease-in-out;
+  }
+}

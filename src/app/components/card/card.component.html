@@ -1,0 +1,14 @@
+<div class="card" [class.flipped]="flipped" (click)="toggleFlip()">
+  <div class="card-flip">
+    <div class="card-front">
+      <img alt="Card image" class="card-img-top" [src]="imageUrl" />
+    </div>
+    <div class="card-back">
+      <div class="card-body">
+        <h5 class="card-title">{{ title }}</h5>
+        <p class="card-text">{{ text }}</p>
+        <a class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>

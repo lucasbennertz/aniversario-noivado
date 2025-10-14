@@ -1,8 +1,10 @@
 .card {
   perspective: 1000px;
-  width: 5dvw;
-  height: 10dvh;
+  width: 17dvw;
+  height: 20dvh;
   cursor: pointer;
+  position: relative;
+
 
   .card-flip {
     width: 100%;
@@ -33,7 +35,7 @@
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: fill;
     }
   }
 
@@ -48,7 +50,8 @@
     justify-content: justify;
   }
   &:hover {
-    transform: scale(2);
+    transform: scale(1.4);
     transition: all 0.3s ease-in-out;
+    z-index: 10;
   }
 }
